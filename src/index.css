@@ -3,7 +3,14 @@
   padding: 0;
 }
 
+:root {
+  --primary_colour: #6c63ff;
+  --Secondary_colour: #9f9be2;
+  --tertiary_colour: #536dfe;
+  --post_colour: #f9a826;
+}
+
 body {
-  background-color: azure;
   width: 100%;
+  height: 100%;
 }
