@@ -8,7 +8,7 @@ const DashboardRoutes = () => {
     <div>
       <Routes>
         <Route exaxt path="/home" element={<Dashboard />} />
-        <Route path="/home/about" element={<About />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
