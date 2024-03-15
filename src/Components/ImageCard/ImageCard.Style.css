@@ -1,0 +1,9 @@
+.imageCard {
+  max-width: 200px;
+  min-height: 250px;
+  border: none;
+}
+
+.image {
+  width: 50px;
+}

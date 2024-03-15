@@ -9,13 +9,14 @@ const App = () => {
 
   return (
     <>
-      {isDesktop ? (
+      {/* {isDesktop ? (
         <Router />
       ) : (
         <div className="message">
           This website can only be viewed on desktop.
         </div>
-      )}
+      )} */}
+      <Router />
     </>
   );
 };

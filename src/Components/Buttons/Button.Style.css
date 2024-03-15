@@ -1,0 +1,13 @@
+.button {
+  color: var(--post_colour);
+  background-color: none;
+  font-weight: 500;
+  padding: 7px 20px;
+  border: 1px solid transparent;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

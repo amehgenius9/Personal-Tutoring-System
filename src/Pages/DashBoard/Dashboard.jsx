@@ -1,19 +1,23 @@
 import React from "react";
 import "./Dashboard.style.css";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Button from "../../Components/Buttons/Button";
+import Overview from "../Overview/Overview";
+import SettingsPage from "../SettingsPage/SettingsPage";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
-  const handleButtonClick = () => {
-    const about = "/about";
-    navigate(about);
-  };
   return (
     <div>
-      <h1 className="header">Person Tutoring System</h1>
-      <button onClick={handleButtonClick}>Next Page</button>
+      <Routes>
+        <Route path="/" element={<Overview />} />
+        <Route path="/settings" element={<SettingsPage />} />
+      </Routes>
     </div>
+
+    // <div>
+    //   <h1 className="header">Person Tutoring System</h1>
+    //   <Button title="Next Page" Onclick={handleButtonClick} />
+    // </div>
   );
 };
 
