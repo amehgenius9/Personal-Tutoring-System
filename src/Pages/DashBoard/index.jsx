@@ -1,4 +1,4 @@
-// export { default } from "./Dashboard";
+export { default } from "./Dashboard";
 
 // import React from "react";
 // import DashboardRoutes from "./routes/DashboardRoutes";

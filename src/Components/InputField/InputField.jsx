@@ -9,10 +9,9 @@ const InputField = ({
   value,
   onChange,
   className,
-  span,
 }) => {
   return (
-    <>
+    <span className=".input-container">
       <input
         type={type}
         id={id}
@@ -23,9 +22,14 @@ const InputField = ({
         required
         className={`inputField ${className}`}
       />
-      {/* <span className='icon'>{span}</span> */}
-    </>
+      {/* <label for="inputField" placeholder={placeholder} /> */}
+    </span>
   );
 };
+
+// <div class="input-container">
+//         <input type="text" id="inputField" placeholder=" " />
+//         <label for="inputField">Placeholder</label>
+//       </div>
 
 export default InputField;

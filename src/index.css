@@ -5,9 +5,10 @@
 
 :root {
   --primary_colour: #6c63ff;
-  --Secondary_colour: #9f9be2;
+  --Secondary_colour: #b86acf;
   --tertiary_colour: #536dfe;
   --post_colour: #f9a826;
+  --white: #ffffff;
 }
 
 body {

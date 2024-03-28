@@ -1,13 +1,14 @@
 .button {
-  color: var(--post_colour);
-  background-color: none;
+  color: white;
+  background-color: transparent;
   font-weight: 500;
-  padding: 7px 20px;
-  border: 1px solid transparent;
+  padding: 7px 30px;
+  border: 1px solid rgb(196, 193, 193);
   font-size: 0.7rem;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  cursor: pointer;
 }

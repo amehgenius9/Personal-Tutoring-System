@@ -1,0 +1,91 @@
+.login_container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+}
+
+.icon_container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/bg1.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.field_container {
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  padding-bottom: 100px;
+  justify-content: center;
+  align-items: flex-end;
+  /* background-color: #ffffff; */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(233, 133, 220, 0.55),
+      rgba(233, 133, 220, 0.55)
+    ),
+    url(../../assets/undraw_fingerprint_re_uf3f.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #724983;
+}
+
+.login_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.header_icons {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.header_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e1c1f;
+  text-align: left !important;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  background-color: black;
+  border: none;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  background-color: var(--Secondary_colour);
+  transition: ease-in-out;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 100px !important;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
