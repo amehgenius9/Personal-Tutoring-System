@@ -36,15 +36,19 @@ const LoginPage = () => {
     dispatcher(loginUser({ userCredentials }))
       .then((result) => {
         if (result.payload) {
+          // const route =  result.payload.category === "admin" ? '/dashboard' : result.payload.category === 'tutor'? "/tutor/dashboard": "/tutee/dashboard"
           setEmail("");
           setName("");
-          navigate("/dashboard");
+          navigate("/dashboard"); // navigate(result.payload.category == 'tutor' ? '/dashboard' : '/tutee/dashboard') // navigate(route)
           toast.success("You have successfully logged in!");
+        } else {
+          toast.error(
+            "Invalid credentials! Please try again with correct details"
+          );
         }
       })
       .catch((error) => {
-        console.log(error);
-        toast.error("An error has occured");
+        toast.error(error);
       });
   };
   return (

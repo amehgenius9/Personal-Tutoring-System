@@ -2,13 +2,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const loginUser = createAsyncThunk(
-  "auth/login", // https://e073-102-88-81-203.ngrok-free.app/api/v1/auth/login
+  "auth/login",
   async (userCredentials) => {
-    console.log("User Credentials", userCredentials);
     const response = await axios.post(
       "https://jsonplaceholder.typicode.com/users",
       userCredentials
     );
+    console.log(response.data);
     const responseData = response.data;
     localStorage.setItem("user", JSON.stringify(responseData));
     return responseData;
@@ -18,10 +18,10 @@ export const loginUser = createAsyncThunk(
 export const signupUser = createAsyncThunk("auth/signup", async (newUser) => {
   const response = await axios.post(
     "https://jsonplaceholder.typicode.com/users",
-    newUser
+    newUser // response data should be boolean
   );
-  const responseData = response.data;
-  localStorage.setItem("user", JSON.stringify(responseData));
+  const responseData = [true, false][Math.round(Math.random())];
+
   return responseData;
 });
 
@@ -49,12 +49,15 @@ const authentication = createSlice({
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
         state.user = null;
-        console.log(state.error.message);
-        if (action.error.message === "Request failed with status code 401") {
-          state.error = "Access Denied! Invalid Credentials";
-        } else {
-          state.error = action.error.message;
-        }
+        state.error =
+          action.error.message === "Request failed with status code 401"
+            ? "Access Denied! Invalid Credentials"
+            : action.error.message;
+      })
+      .addCase(logoutUser, (state) => {
+        state.user = null;
+        state.loading = false;
+        state.error = null;
       });
   },
 });

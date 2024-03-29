@@ -11,12 +11,11 @@ import SettingsPage from "./Pages/SettingsPage/SettingsPage";
 import useWindowSize from "./useWindowSize";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Layout from "./Layout/Layout";
 
 const App = () => {
   const { width } = useWindowSize();
   const isDesktop = width >= 768;
-
-  // const user = useSelector((state) => state.authentication.user);
 
   return (
     <>
@@ -24,23 +23,12 @@ const App = () => {
       {isDesktop ? (
         <BrowserRouter>
           <Routes>
-            <Route exact path="/*" element={<LandingPage />} />
+            <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/signup" element={<SignupPage />} />
             <Route exact path="/login" element={<LoginPage />} />
-            {/* <Route
-              path="/"
-              element={
-                user ? (
-                  <> */}
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/settings" element={<SettingsPage />} />
-            {/* </>
-                ) : (
-                  <Navigate to="/signup" replace />
-                )
-              }
-            /> */}
           </Routes>
         </BrowserRouter>
       ) : (

@@ -1,12 +1,12 @@
 import React from "react";
 import "./Dashboard.style.css";
 
-const Dashboard = () => {
+const DashBoard = () => {
   return (
-    <div style={{ background: "white", height: "100vh" }}>
-      <h1>DashBoard</h1>
+    <div className="one">
+      <h1>Hello</h1>
     </div>
   );
 };
 
-export default Dashboard;
+export default DashBoard;

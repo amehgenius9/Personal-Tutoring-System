@@ -1,0 +1,34 @@
+.layout_container {
+  width: 100%;
+  /* background-color: #ffffff; */
+}
+
+.layout_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid red;
+}
+
+.layout_icon {
+  width: 1.2rem;
+}
+
+.main_container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 90vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eaecef;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  overflow-y: scroll;
+}

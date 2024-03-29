@@ -31,6 +31,8 @@ const SignupPage = () => {
         setEmail("");
         navigate("/login");
         toast.success("Registered successfully! Create a password");
+      } else {
+        toast.error("Invalid Credentials");
       }
     });
   };
