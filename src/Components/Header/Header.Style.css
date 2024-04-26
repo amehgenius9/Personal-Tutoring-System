@@ -1,0 +1,20 @@
+.header_parent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	padding:  0 30px;
+}
+
+.header {
+}
+
+.details {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.header_btn {
+	color: black;
+}
